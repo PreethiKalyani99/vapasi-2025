@@ -1,4 +1,10 @@
 package org.example.bank;
 
-public class BalanceException {
+public class BalanceException extends Exception {
+    public BalanceException() {
+    }
+
+    public BalanceException(String message) {
+        super(message);
+    }
 }
