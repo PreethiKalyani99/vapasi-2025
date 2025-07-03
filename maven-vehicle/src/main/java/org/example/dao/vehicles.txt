@@ -1,0 +1,3 @@
+"v1", "Yamaha", "White", "Diesel", 200000, 101
+"v2", "BMW", "Black", "Diesel", 400000, 102
+"v3", "AUDI", "Silver", "Diesel", 600000, 103
