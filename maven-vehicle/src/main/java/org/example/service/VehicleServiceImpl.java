@@ -1,7 +1,8 @@
-package notes.streams.service;
+package org.example.service;
 
-import notes.streams.Vehicle;
-import notes.streams.dao.VehicleDao;
+import org.example.bean.Vehicle;
+import org.example.dao.VehicleDao;
+
 
 import java.util.List;
 

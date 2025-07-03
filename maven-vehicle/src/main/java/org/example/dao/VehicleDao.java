@@ -1,6 +1,6 @@
-package notes.streams.dao;
+package org.example.dao;
 
-import notes.streams.Vehicle;
+import org.example.bean.Vehicle;
 
 import java.util.List;
 

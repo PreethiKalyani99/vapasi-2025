@@ -1,4 +1,4 @@
-package org.example;
+package org.example.bean;
 
 public class Vehicle {
     private String model;

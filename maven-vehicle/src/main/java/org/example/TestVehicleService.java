@@ -1,9 +1,11 @@
-package notes.streams;
+package org.example;
 
-import notes.streams.dao.VehicleDao;
-import notes.streams.dao.VehicleDaoImpl;
-import notes.streams.service.VehicleService;
-import notes.streams.service.VehicleServiceImpl;
+
+import org.example.bean.Vehicle;
+import org.example.dao.VehicleDao;
+import org.example.dao.VehicleDaoImpl;
+import org.example.service.VehicleService;
+import org.example.service.VehicleServiceImpl;
 
 public class TestVehicleService {
     public static void main(String[] args) {
@@ -16,6 +18,5 @@ public class TestVehicleService {
         service.add(new Vehicle("v3", "AUDI", "Silver", "Diesel", 600000, 103));
 
         service.findAll().forEach(System.out::println);
-
     }
 }
