@@ -30,7 +30,7 @@ public class GenericDao {
         }
     }
 
-    public <T> T findById(Class<T> entity, int id) {
+    public <T, U> T findById(Class<T> entity, U id) {
         EntityManager em = emf.createEntityManager();
         try {
             return em.find(entity, id);
@@ -45,14 +45,33 @@ public class GenericDao {
         return query.getResultList();
     }
 
-    public <T> boolean delete (Class<T> tClass, int id) {
+    public <T, U> boolean delete (Class<T> T,  U id) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction txn = em.getTransaction();
 
         try {
             txn.begin();
-            T entity = em.find(tClass, id);
+            T entity = em.find(T, id);
             em.remove(entity);
+            txn.commit();
+            return true;
+        }
+        catch (Exception e) {
+            txn.rollback();
+            return false;
+        }
+        finally {
+            em.close();
+        }
+    }
+
+    public <T> boolean update (T T) {
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction txn = em.getTransaction();
+
+        try {
+            txn.begin();
+            em.merge(T);
             txn.commit();
             return true;
         }
