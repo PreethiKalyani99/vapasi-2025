@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.entity.ReceiverShares;
+
 import java.text.DecimalFormat;
 import java.util.Map;
 

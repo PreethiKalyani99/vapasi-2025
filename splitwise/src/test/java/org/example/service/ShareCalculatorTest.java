@@ -1,5 +1,7 @@
-package org.example;
+package org.example.service;
 
+import org.example.entity.Expense;
+import org.example.entity.ReceiverShares;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

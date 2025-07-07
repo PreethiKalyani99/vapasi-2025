@@ -1,5 +1,6 @@
-package org.example;
+package org.example.service;
 
+import org.example.entity.Expense;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
